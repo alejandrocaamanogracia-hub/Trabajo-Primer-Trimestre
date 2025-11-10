@@ -1,0 +1,12 @@
+.titulo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+    color: #69130c;
+    font-size: 800%;
+    margin-bottom: 15%;
+    font-family: "Jolly Lodger", system-ui;    
+
+}
