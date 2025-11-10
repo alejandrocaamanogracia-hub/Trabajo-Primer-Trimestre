@@ -3,73 +3,119 @@ import java.util.Scanner;
 public class TrabajoFinal {
     public static Scanner sc = new Scanner(System.in);
 
+    static int opcion;
+    static String rojo = "\u001B[31m";
+    static String verde = "\u001B[32m";
+    static String reset = "\u001B[0m";
+
 
     public static void main(String[] args) {
 
-        System.out.println("1,2,3");
-        int opcion = sc.nextInt();
+        System.out.println("1. Quedarte en la ciudad");
+        System.out.println("2. Irte al bosque");
+        System.out.println("3. Buscar ayuda");
+        opcion = scan();
 
         while (true) {
             switch (opcion) {
                 case 1:
-                    System.out.println("A");
-                    System.out.println("1,2,3");
-                    opcion = sc.nextInt();
+                    System.out.println("1. Buscar en la calle");
+                    System.out.println("2. Buscar un refugio");
+                    System.out.println("3. Ir al granero");
+                    opcion = scan();
                     if (opcion == 1) {
-                        System.out.println("A1");
+                        System.out.println("Hay muchos zombies, intentas combatir con ellos");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
-                            System.out.println("FINAL FAM");
+                            System.out.println(rojo+"Tras mucha lucha mueres"+reset);
+                            break;
                         }
                     } else if (opcion == 2) {
-                        System.out.println("A2");
+                        System.out.println("Decides buscar un refugio en los pisos colindantes");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
-                            System.out.println("FINAL FAB");
+                            System.out.println(verde+"Te encuentras un grupo de supervivientes que te aceptan"+reset);
+                            break;
                         }
                     } else if (opcion == 3) {
-                        System.out.println("A3");
+                        System.out.println("");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
                             System.out.println("FINAL FABN");
+                            break;
                         }
                     }
                     break;
 
                 case 2:
                     System.out.println("B");
-                    System.out.println("1,2,3");
-                    opcion = sc.nextInt();
+                    opcion = scan();
                     if (opcion == 1) {
                         System.out.println("B1");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
                             System.out.println("FINAL FABN");
+                            break;
                         }
                     } else if (opcion == 2) {
                         System.out.println("B2");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
-                            System.out.println("FINAL FBM");
+                            System.out.println(rojo+"FINAL FBM"+reset);
+                            break;
                         }
                     } else if (opcion == 3) {
                         System.out.println("B3");
                         System.out.println("1. Continuar");
-                        opcion = sc.nextInt();
+                        opcion = scan_fin();
                         if (opcion == 1) {
-                            System.out.println("FINAL FBB");
+                            System.out.println(verde+"FINAL FBB"+reset);
+                            break;
                         }
                     }
                     break;
 
                 case 3:
-                    System.out.println("C");
+                    System.out.println(rojo+"Te matan"+reset);
                     break;
+            }
+            break;
+
+        }
+    }
+
+    static int scan(){
+            while(true) {
+                System.out.println("Introduce un número del 1-3");
+                if (sc.hasNextInt()) {
+                    opcion = sc.nextInt();
+                    if (opcion >= 1 && opcion <= 3) {
+                        return opcion;
+                    }
+                }
+                else{
+                    sc.next();
+                }
+            }
+    }
+
+    static int scan_fin(){
+        while(true) {
+            if (sc.hasNextInt()) {
+                System.out.println("1. Continuar");
+                opcion = sc.nextInt();
+                if (opcion ==1) {
+                    return opcion;
+                }
+            }
+            else{
+                System.out.println("1. Continuar");
+                sc.next();
             }
         }
     }
