@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class TrabajoFinal {
+    public static Scanner sc = new Scanner(System.in);
+
+
+    public static void main(String[] args) {
+
+        System.out.println("1,2,3");
+        int opcion = sc.nextInt();
+
+        while (true) {
+            switch (opcion) {
+                case 1:
+                    System.out.println("A");
+                    System.out.println("1,2,3");
+                    opcion = sc.nextInt();
+                    if (opcion == 1) {
+                        System.out.println("A1");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FAM");
+                        }
+                    } else if (opcion == 2) {
+                        System.out.println("A2");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FAB");
+                        }
+                    } else if (opcion == 3) {
+                        System.out.println("A3");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FABN");
+                        }
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("B");
+                    System.out.println("1,2,3");
+                    opcion = sc.nextInt();
+                    if (opcion == 1) {
+                        System.out.println("B1");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FABN");
+                        }
+                    } else if (opcion == 2) {
+                        System.out.println("B2");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FBM");
+                        }
+                    } else if (opcion == 3) {
+                        System.out.println("B3");
+                        System.out.println("1. Continuar");
+                        opcion = sc.nextInt();
+                        if (opcion == 1) {
+                            System.out.println("FINAL FBB");
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("C");
+                    break;
+            }
+        }
+    }
+}
